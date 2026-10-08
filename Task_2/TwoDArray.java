@@ -128,7 +128,6 @@ class TwoDArray {
 
         int position = row * 3 + col;
 
-        // Values ko right side shift karna
         for (int i = size; i > position; i--) {
 
             int oldRow = (i - 1) / 3;
@@ -222,7 +221,7 @@ class TwoDArray {
             return;
         }
 
-        // Values ko left side shift karna
+        // shifting values left side
         for (int i = position; i < size - 1; i++) {
 
             int currentRow = i / 3;

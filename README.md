@@ -19,7 +19,6 @@ DSA-Data-Structures/
 │   ├── Queue_using_LL.java
 │   ├── Stack_using_LL.java
 │   ├── TwoDArray.java
-│   ├── Circular_LL.java
 │   └── CircularQueue.java
 │
 └── README.md
