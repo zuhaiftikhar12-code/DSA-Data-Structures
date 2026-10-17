@@ -1,5 +1,6 @@
 import java.util.*;
 public class Selection_Sort {
+    // Method to print all elements of the array
     public static void printArray(int A[]){
         for (int i = 0; i < A.length; i++) {
             System.out.print(A[i] + " ");
@@ -9,13 +10,14 @@ public class Selection_Sort {
     public static void main(String[] args) {
         int[] arr=new int[1000];
         Random random=new Random(12345);
-        // input elements in array
+        // input 1000 elements in array
         for(int i=0;i<arr.length;i++){
             arr[i]=random.nextInt(1000);
         }
         
+        // Record the end time before sorting
         long start=System.nanoTime();
-        //Selection sorting
+        //Selection sort
         for (int i = 0; i < arr.length - 1; i++) {
             int smallest=i;//0
             for (int j = i+1; j <arr.length; j++) {
@@ -23,12 +25,13 @@ public class Selection_Sort {
                     smallest=j;
                 }
             }
-            //Swap
+            //Swaping
             int temp=arr[i];
             arr[i]=arr[smallest];
             arr[smallest]=temp;
         }
         long end =System.nanoTime();
+        // Record the end time after sorting
         long time=end-start;
         System.out.println("=====selection Sorted Array=====");
         System.out.println("Total elements: "+arr.length);

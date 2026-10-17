@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Bubble_Sort {
-
+    // Method to print all elements of the array
     public static void PrintArr(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -18,7 +18,7 @@ public class Bubble_Sort {
             arr[i] = random.nextInt(1000);
         }
 
-        // Start counting Time
+        // Record the end time before sorting
         long start = System.nanoTime();
         // Bubble Sort
         for (int i = 0; i < arr.length - 1; i++) { // n-1
@@ -32,7 +32,7 @@ public class Bubble_Sort {
             } // Time Complexity = O(n^2)
         }
 
-        // Stop Counting Time
+        // Record the end time after sorting
         long end = System.nanoTime();
         long time = end - start;
         System.out.println("===== Bubble Sorted Array =====");

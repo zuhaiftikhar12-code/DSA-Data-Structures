@@ -1,11 +1,15 @@
 import java.util.*;
 public class Merge_sort {
+
+    // Method to print all elements of the array
     public static void printArray(int A[]){
         for (int i = 0; i < A.length; i++) {
             System.out.print(A[i] + " ");
         }
         System.out.println();
     }
+
+    // Method to merge two sorted halves into one sorted array
     public static void conquer(int arr[],int si,int mid,int ei){
         int[] merged=new int[ei-si+1];
         int idx1=si;
@@ -24,10 +28,14 @@ public class Merge_sort {
         while(idx2<=ei){
             merged[x++]=arr[idx2++];
         }
+
+        // Copy the merged elements back into the original array
         for(int i=0,j=si;i<merged.length;i++,j++){
             arr[j]=merged[i];
         }
     }
+    
+     // Method to divide the array  into smaller parts
     public static void divide(int arr[],int si,int ei) {
         if(si>=ei){
             return;
